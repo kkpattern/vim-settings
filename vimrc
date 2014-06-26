@@ -25,3 +25,5 @@ autocmd filetype python set colorcolumn=80
 
 " Toggle NERDTree.
 map <F3> :NERDTreeToggle<CR>
+
+let g:ycm_autoclose_preview_window_after_insertion = 1
