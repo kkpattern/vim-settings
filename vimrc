@@ -22,3 +22,6 @@ filetype plugin indent on    " required
 
 autocmd filetype python set textwidth=79
 autocmd filetype python set colorcolumn=80
+
+" Toggle NERDTree.
+map <F3> :NERDTreeToggle<CR>
