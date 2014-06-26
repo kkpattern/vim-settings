@@ -13,6 +13,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'hynek/vim-python-pep8-indent'
 " auto-complete engine
 Plugin 'Valloric/YouCompleteMe'
+" NERDTree
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -20,3 +22,6 @@ filetype plugin indent on    " required
 
 autocmd filetype python set textwidth=79
 autocmd filetype python set colorcolumn=80
+
+" Toggle NERDTree.
+map <F3> :NERDTreeToggle<CR>
