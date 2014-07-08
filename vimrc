@@ -1,24 +1,29 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+execute pathogen#infect()
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-" python pep8 indentation
-Plugin 'hynek/vim-python-pep8-indent'
-" auto-complete engine
-Plugin 'Valloric/YouCompleteMe'
-" NERDTree
-Plugin 'scrooloose/nerdtree'
+syntax on
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
 filetype plugin indent on    " required
+
+" If golang is installed, enable golang-vim plugin
+if ($GOROOT!="")
+    " Clear filetype flags before changing runtimepath to force Vim to
+    " reload them.
+    if exists("g:did_load_filetypes")
+        filetype off
+        filetype plugin indent off
+    endif
+    set runtimepath+=$GOROOT/misc/vim
+    filetype plugin indent on
+    syntax on
+endif
+
+autocmd filetype go set et
+autocmd filetype go set sw=4
+
+" Python settings
 
 autocmd filetype python set textwidth=79
 autocmd filetype python set colorcolumn=80
