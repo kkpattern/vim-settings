@@ -28,6 +28,10 @@ autocmd filetype go set sw=4
 autocmd filetype python set textwidth=79
 autocmd filetype python set colorcolumn=80
 
+" HTML settings
+autocmd filetype html set et
+autocmd filetype html set sw=4
+
 " Toggle NERDTree.
 map <F3> :NERDTreeToggle<CR>
 
