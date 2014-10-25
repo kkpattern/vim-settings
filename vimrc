@@ -35,4 +35,7 @@ autocmd filetype html set sw=4
 " Toggle NERDTree.
 map <F3> :NERDTreeToggle<CR>
 
+" Ignore pyc files.
+let NERDTreeIgnore=['\.pyc$', '\~$']
+
 let g:ycm_autoclose_preview_window_after_insertion = 1
