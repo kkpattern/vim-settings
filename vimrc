@@ -39,3 +39,5 @@ map <F3> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
 let g:ycm_autoclose_preview_window_after_insertion = 1
+
+colorscheme seoul256
