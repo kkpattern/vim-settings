@@ -34,6 +34,9 @@ autocmd filetype html set sw=4
 
 " Toggle NERDTree.
 map <F3> :NERDTreeToggle<CR>
+" Disable directory arrows so nerdtree works on (almost) every terminal.
+let g:NERDTreeDirArrows=0
+
 
 " Ignore pyc files.
 let NERDTreeIgnore=['\.pyc$', '\~$']
