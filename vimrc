@@ -43,4 +43,8 @@ let NERDTreeIgnore=['\.pyc$', '\~$']
 
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
+set t_Co=256
 colorscheme seoul256
+
+match Error /[\t ]\+$/
+2match TabLineFill /\t/
