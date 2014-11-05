@@ -28,7 +28,6 @@ endif
 
 autocmd BufEnter,BufNewFile,BufRead *.h,*.c setfiletype c
 autocmd BufEnter,BufNewFile,BufRead *.py, setfiletype python
-autocmd BufEnter,BufNewFile,BufRead *.html, setfiletype html
 
 autocmd filetype go set et
 autocmd filetype go set sw=4
@@ -41,6 +40,10 @@ autocmd filetype python set colorcolumn=80
 " HTML settings
 autocmd filetype html set et
 autocmd filetype html set sw=4
+
+" HTML django settings.
+autocmd filetype htmldjango set et
+autocmd filetype htmldjango set sw=4
 
 " C settings
 autocmd filetype c set et
