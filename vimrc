@@ -1,7 +1,10 @@
 set nocompatible              " be iMproved, required
 
-set encoding=utf-8
-set fileencodings=utf-8,chinese,gbk,gb2312,cp936,cp950,gb18030,ucs-bom,utf-16,latin1
+if has("win32") || has("win16")
+else
+    set encoding=utf-8
+    set fileencodings=utf-8,chinese,gbk,gb2312,cp936,cp950,gb18030,ucs-bom,utf-16,latin1
+endif
 
 set backspace=indent,eol,start
 
