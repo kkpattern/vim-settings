@@ -26,6 +26,10 @@ if ($GOROOT!="")
     syntax on
 endif
 
+autocmd BufEnter,BufNewFile,BufRead *.h,*.c setfiletype c
+autocmd BufEnter,BufNewFile,BufRead *.py, setfiletype python
+autocmd BufEnter,BufNewFile,BufRead *.html, setfiletype html
+
 autocmd filetype go set et
 autocmd filetype go set sw=4
 
@@ -37,6 +41,12 @@ autocmd filetype python set colorcolumn=80
 " HTML settings
 autocmd filetype html set et
 autocmd filetype html set sw=4
+
+" C settings
+autocmd filetype c set et
+autocmd filetype c set sw=2
+autocmd filetype c set textwidth=80
+autocmd filetype c set colorcolumn=81
 
 " Toggle NERDTree.
 map <F3> :NERDTreeToggle<CR>
