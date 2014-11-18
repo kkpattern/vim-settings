@@ -29,7 +29,7 @@ if ($GOROOT!="")
     syntax on
 endif
 
-autocmd BufEnter,BufNewFile,BufRead *.h,*.c setfiletype c
+autocmd BufEnter,BufNewFile,BufRead *.h,*.c setfiletype cpp
 autocmd BufEnter,BufNewFile,BufRead *.py, setfiletype python
 
 autocmd filetype go set et
@@ -48,11 +48,12 @@ autocmd filetype html set sw=4
 autocmd filetype htmldjango set et
 autocmd filetype htmldjango set sw=4
 
-" C settings
-autocmd filetype c set et
-autocmd filetype c set sw=2
-autocmd filetype c set textwidth=80
-autocmd filetype c set colorcolumn=81
+" Cpp settings
+autocmd filetype cpp set et
+autocmd filetype cpp set sw=2
+autocmd filetype cpp set number
+autocmd filetype cpp set textwidth=80
+autocmd filetype cpp set colorcolumn=81
 
 " Toggle NERDTree.
 map <F3> :NERDTreeToggle<CR>
