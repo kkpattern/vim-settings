@@ -1,4 +1,7 @@
-language messages en
+if has("win32") || has("win16")
+    language messages en
+endif
+
 set nocompatible              " be iMproved, required
 
 set encoding=utf-8
