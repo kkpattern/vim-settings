@@ -17,6 +17,9 @@ syntax on
 
 filetype plugin indent on    " required
 
+set number
+set tabstop=4
+
 " If golang is installed, enable golang-vim plugin
 if ($GOROOT!="")
     " Clear filetype flags before changing runtimepath to force Vim to
