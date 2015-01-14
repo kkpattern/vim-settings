@@ -75,3 +75,5 @@ colorscheme seoul256
 
 match Error /[\t ]\+$/
 2match TabLineFill /\t/
+
+set incsearch
