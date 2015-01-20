@@ -46,6 +46,8 @@ autocmd filetype python set colorcolumn=80
 autocmd filetype python set foldmethod=indent
 autocmd filetype python nnoremap <space> za
 autocmd filetype python set foldnestmax=2
+autocmd filetype python let g:syntastic_quiet_messages = { "type": "style" }
+autocmd filetype python set et!
 
 " HTML settings
 autocmd filetype html set et
