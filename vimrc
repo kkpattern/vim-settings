@@ -43,6 +43,9 @@ autocmd filetype go set sw=4
 
 autocmd filetype python set textwidth=79
 autocmd filetype python set colorcolumn=80
+autocmd filetype python set foldmethod=indent
+autocmd filetype python nnoremap <space> za
+autocmd filetype python set foldnestmax=2
 
 " HTML settings
 autocmd filetype html set et
