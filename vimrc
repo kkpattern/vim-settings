@@ -82,3 +82,5 @@ match Error /[\t ]\+$/
 2match TabLineFill /\t/
 
 set incsearch
+
+let g:ctrlp_working_path_mode = 'a'
