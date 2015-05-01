@@ -86,3 +86,5 @@ set incsearch
 let g:ctrlp_working_path_mode = 'a'
 
 nmap <c-t> :Ag! ""<left>
+
+:set laststatus=2
