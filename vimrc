@@ -88,3 +88,8 @@ let g:ctrlp_working_path_mode = 'a'
 nmap <c-t> :Ag! ""<left>
 
 :set laststatus=2
+
+nmap <c-h> <c-w>h
+nmap <c-j> <c-w>j
+nmap <c-k> <c-w>k
+nmap <c-l> <c-w>l
