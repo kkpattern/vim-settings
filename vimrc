@@ -89,6 +89,10 @@ nmap <c-t> :Ag! ""<left>
 
 :set laststatus=2
 
+let mapleader=","
+nmap ; !:
+nmap <leader>q !:q<CR>
+
 nmap <c-h> <c-w>h
 nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
