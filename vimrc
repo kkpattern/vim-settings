@@ -46,8 +46,8 @@ autocmd filetype python set colorcolumn=80
 autocmd filetype python set foldmethod=indent
 autocmd filetype python nnoremap <space> za
 autocmd filetype python set foldnestmax=2
-autocmd filetype python let g:syntastic_quiet_messages = { "type": "style" }
-autocmd filetype python set et!
+" autocmd filetype python let g:syntastic_quiet_messages = { "type": "style" }
+" autocmd filetype python set et!
 
 " HTML settings
 autocmd filetype html set et
@@ -58,8 +58,8 @@ autocmd filetype htmldjango set et
 autocmd filetype htmldjango set sw=4
 
 " Cpp settings
-autocmd filetype cpp set et
-autocmd filetype cpp set sw=2
+" autocmd filetype cpp set et
+" autocmd filetype cpp set sw=2
 autocmd filetype cpp set number
 autocmd filetype cpp set textwidth=80
 autocmd filetype cpp set colorcolumn=81
@@ -97,3 +97,8 @@ nmap <c-h> <c-w>h
 nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
 nmap <c-l> <c-w>l
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll|pyc)$',
+  \ }
