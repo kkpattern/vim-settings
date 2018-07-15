@@ -41,11 +41,13 @@ autocmd filetype go set sw=4
 
 " Python settings
 
-autocmd filetype python set textwidth=79
+" autocmd filetype python set textwidth=79
 autocmd filetype python set colorcolumn=80
 autocmd filetype python set foldmethod=indent
 autocmd filetype python nnoremap <space> za
 autocmd filetype python set foldnestmax=2
+autocmd WinEnter,BufEnter,BufNewFile,BufRead *.py match Error /[\t ]\+$/
+autocmd WinEnter,BufEnter,BufNewFile,BufRead *.py 2match TabLineFill /\t/
 " autocmd filetype python let g:syntastic_quiet_messages = { "type": "style" }
 " autocmd filetype python set et!
 
@@ -78,12 +80,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 set t_Co=256
 colorscheme seoul256
 
-match Error /[\t ]\+$/
-2match TabLineFill /\t/
-
 set incsearch
-
-let g:ctrlp_working_path_mode = 'a'
 
 nmap <c-t> :Ag! ""<left>
 
@@ -98,6 +95,8 @@ nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
 nmap <c-l> <c-w>l
 
+" Ctrl-P settings.
+let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll|pyc)$',
