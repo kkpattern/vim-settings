@@ -33,6 +33,9 @@ if ($GOROOT!="")
     syntax on
 endif
 
+" set tab visible.
+autocmd WinEnter,BufEnter,BufNewFile,BufRead * 2match TabLineFill /\t/
+
 autocmd BufEnter,BufNewFile,BufRead *.h,*.c setfiletype cpp
 autocmd BufEnter,BufNewFile,BufRead *.py, setfiletype python
 
@@ -47,7 +50,6 @@ autocmd filetype python set foldmethod=indent
 autocmd filetype python nnoremap <space> za
 autocmd filetype python set foldnestmax=2
 autocmd WinEnter,BufEnter,BufNewFile,BufRead *.py match Error /[\t ]\+$/
-autocmd WinEnter,BufEnter,BufNewFile,BufRead *.py 2match TabLineFill /\t/
 
 let g:syntastic_python_flake8_args = '--builtins network,ccp,CCSize,CCRect,ccc3,ccc4,ccc4f,ccc3FromHex,ccc4FromHex,ccc4aFromHex,ccc4fFromHex,get_sprite_frame_fail,GetSpriteFrameFromPlistAndPath,GetTextByLanguageI,message,leading_message,message_debug,confirm_show,tip_tick,ui_show,ui_set_visible,ui_get,ui_get_type_all,ui_hide_type,ui_close,uisystem,_,filter_text,filter_nickname'
 autocmd filetype python let g:syntastic_quiet_messages = { "type": "style" }
@@ -77,8 +79,6 @@ let g:NERDTreeDirArrows=0
 " Ignore pyc files.
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
-let g:ycm_autoclose_preview_window_after_insertion = 1
-
 set t_Co=256
 colorscheme seoul256
 
@@ -105,3 +105,21 @@ let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll|pyc)$',
   \ }
+
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_key_list_select_completion=["<tab>"]
+let g:ycm_key_list_previous_completion=["<S-tab>"]
+
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+let g:UltiSnipsExpandTrigger="<nop>"
+let g:ulti_expand_or_jump_res = 0
+function! <SID>ExpandSnippetOrReturn()
+    let snippet = UltiSnips#ExpandSnippetOrJump()
+    if g:ulti_expand_or_jump_res > 0
+        return snippet
+    else
+        return "\<CR>"
+    endif
+endfunction
+inoremap <expr> <CR> pumvisible() ? "<C-R>=<SID>ExpandSnippetOrReturn()<CR>" : "\<CR>"
