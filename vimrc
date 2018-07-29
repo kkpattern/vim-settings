@@ -48,8 +48,10 @@ autocmd filetype python nnoremap <space> za
 autocmd filetype python set foldnestmax=2
 autocmd WinEnter,BufEnter,BufNewFile,BufRead *.py match Error /[\t ]\+$/
 autocmd WinEnter,BufEnter,BufNewFile,BufRead *.py 2match TabLineFill /\t/
-" autocmd filetype python let g:syntastic_quiet_messages = { "type": "style" }
-" autocmd filetype python set et!
+
+let g:syntastic_python_flake8_args = '--builtins network,ccp,CCSize,CCRect,ccc3,ccc4,ccc4f,ccc3FromHex,ccc4FromHex,ccc4aFromHex,ccc4fFromHex,get_sprite_frame_fail,GetSpriteFrameFromPlistAndPath,GetTextByLanguageI,message,leading_message,message_debug,confirm_show,tip_tick,ui_show,ui_set_visible,ui_get,ui_get_type_all,ui_hide_type,ui_close,uisystem,_,filter_text,filter_nickname'
+autocmd filetype python let g:syntastic_quiet_messages = { "type": "style" }
+autocmd filetype python set et
 
 " HTML settings
 autocmd filetype html set et
@@ -60,11 +62,11 @@ autocmd filetype htmldjango set et
 autocmd filetype htmldjango set sw=4
 
 " Cpp settings
-" autocmd filetype cpp set et
+autocmd filetype cpp set et!
 " autocmd filetype cpp set sw=2
 autocmd filetype cpp set number
-autocmd filetype cpp set textwidth=80
-autocmd filetype cpp set colorcolumn=81
+" autocmd filetype cpp set textwidth=80
+" autocmd filetype cpp set colorcolumn=81
 
 " Toggle NERDTree.
 map <F3> :NERDTreeToggle<CR>
