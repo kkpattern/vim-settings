@@ -97,6 +97,8 @@ nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
 nmap <c-l> <c-w>l
 
+nmap <tab> :tabn<CR>
+
 " Ctrl-P settings.
 let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_custom_ignore = {
