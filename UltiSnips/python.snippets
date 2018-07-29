@@ -1,0 +1,29 @@
+snippet panel "UI panel"
+import ui.basepanel
+
+
+class Panel(ui.basepanel.BasePanel):
+    """$1"""
+	    __metaclass__ = uisystem.template_meta_method("$2")  # NoQA
+
+    def on_get_template_name(self):
+	    return "$2"
+
+    def init_panel(self$3):
+	    self._template_init_panel()
+        $4
+endsnippet
+
+
+snippet print_stack "Print stack"
+import traceback
+for line in traceback.format_stack():
+    print line
+endsnippet
+
+
+snippet onclick "Cocos OnClick"
+@$1.callback()
+def OnClick(button, touch, event):
+    $2
+endsnippet
