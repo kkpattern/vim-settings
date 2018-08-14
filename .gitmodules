@@ -25,3 +25,6 @@
 [submodule "bundle/LeaderF"]
 	path = bundle/LeaderF
 	url = https://github.com/Yggdroot/LeaderF.git
+[submodule "bundle/ale"]
+	path = bundle/ale
+	url = https://github.com/w0rp/ale.git
