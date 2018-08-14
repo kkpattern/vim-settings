@@ -86,12 +86,7 @@ nmap <c-l> <c-w>l
 
 nmap <tab> :tabn<CR>
 
-" Ctrl-P settings.
-let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll|pyc)$',
-  \ }
+let g:Lf_ShortcutF = '<C-P>'
 
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_list_select_completion=["<tab>"]
