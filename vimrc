@@ -95,6 +95,7 @@ let g:Lf_WorkingDirectoryMode='a'
 let g:Lf_UseCache = 0
 let g:Lf_UseMemoryCache = 0
 let g:Lf_DefaultMode='FullPath'
+let g:Lf_UseVersionControlTool = 0
 
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_list_select_completion=["<tab>"]
