@@ -128,7 +128,5 @@ autocmd filetype python nnoremap <space> za
 autocmd filetype python set foldnestmax=2
 autocmd WinEnter,BufEnter,BufNewFile,BufRead *.py match Error /[\t ]\+$/
 
-let g:syntastic_python_flake8_args = '--builtins network,ccp,CCSize,CCRect,ccc3,ccc4,ccc4f,ccc3FromHex,ccc4FromHex,ccc4aFromHex,ccc4fFromHex,get_sprite_frame_fail,GetSpriteFrameFromPlistAndPath,GetTextByLanguageI,message,leading_message,message_debug,confirm_show,tip_tick,ui_show,ui_set_visible,ui_get,ui_get_type_all,ui_hide_type,ui_close,uisystem,_,filter_text,filter_nickname'
-autocmd filetype python let g:syntastic_quiet_messages = { "type": "style" }
 autocmd filetype python set et
 autocmd filetype python nmap <leader>u :call _SetUtf8()<CR>
