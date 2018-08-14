@@ -71,7 +71,7 @@ colorscheme seoul256
 
 set incsearch
 
-nmap <c-t> :Ag! ""<left>
+nmap <c-t> :Rg ""<left>
 
 :set laststatus=2
 
