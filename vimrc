@@ -87,6 +87,14 @@ nmap <c-l> <c-w>l
 nmap <tab> :tabn<CR>
 
 let g:Lf_ShortcutF = '<C-P>'
+let g:Lf_WildIgnore = {
+            \ 'dir': ['.svn','.git','.hg'],
+            \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
+            \}
+let g:Lf_WorkingDirectoryMode='a'
+let g:Lf_UseCache = 0
+let g:Lf_UseMemoryCache = 0
+let g:Lf_DefaultMode='FullPath'
 
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_list_select_completion=["<tab>"]
