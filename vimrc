@@ -1,5 +1,9 @@
 if has("win32") || has("win16")
     language messages en
+    set guioptions-=m  "remove menu bar
+    set guioptions-=T  "remove toolbar
+    set guioptions-=r  "remove right-hand scroll bar
+    set guioptions-=L  "remove left-hand scroll bar
 endif
 
 set nocompatible              " be iMproved, required
