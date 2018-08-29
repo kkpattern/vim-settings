@@ -70,9 +70,6 @@ let g:NERDTreeDirArrows=0
 " Ignore pyc files.
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
-set t_Co=256
-colorscheme seoul256
-
 set incsearch
 
 nmap <c-t> :Rg ""<left>
@@ -145,3 +142,9 @@ let g:ale_python_flake8_options="--builtins network,ccp,CCSize,CCRect,ccc3,ccc4,
 let g:signify_realtime = 1
 
 nnoremap <c-]> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+
+set termguicolors
+set background=dark
+colo two-firewatch
+let g:airline_theme="twofirewatch"
