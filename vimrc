@@ -141,7 +141,7 @@ let g:ale_python_flake8_options="--builtins network,ccp,CCSize,CCRect,ccc3,ccc4,
 
 let g:signify_realtime = 1
 
-nnoremap <c-]> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+autocmd filetype python nnoremap <c-]> :YcmCompleter GoToDeclaration<CR>
 
 
 set t_Co=256
