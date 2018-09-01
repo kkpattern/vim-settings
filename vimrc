@@ -144,7 +144,16 @@ let g:signify_realtime = 1
 nnoremap <c-]> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 
-set termguicolors
-set background=dark
-colo two-firewatch
-let g:airline_theme="twofirewatch"
+set t_Co=256
+" set termguicolors
+" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" set background=dark " Setting dark mode
+colorscheme seoul256
+" let g:deus_termcolors=256
+
+inoremap <silent><expr> ( complete_parameter#pre_complete("()")
+smap <c-j> <Plug>(complete_parameter#goto_next_parameter)
+imap <c-j> <Plug>(complete_parameter#goto_next_parameter)
+smap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
+imap <c-k> <Plug>(complete_parameter#goto_previous_parameter)

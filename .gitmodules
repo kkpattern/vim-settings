@@ -34,3 +34,6 @@
 [submodule "bundle/vim-two-firewatch"]
 	path = bundle/vim-two-firewatch
 	url = https://github.com/rakr/vim-two-firewatch.git
+[submodule "bundle/CompleteParameter"]
+	path = bundle/CompleteParameter
+	url = https://github.com/tenfyzhong/CompleteParameter.vim.git
