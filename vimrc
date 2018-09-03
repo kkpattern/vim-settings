@@ -147,6 +147,8 @@ let g:signify_realtime = 1
 
 autocmd filetype python nnoremap <c-]> :YcmCompleter GoToDeclaration<CR>
 
+let g:rg_derive_root = "true"
+let g:rg_root_types = ['.git', '.svn', '.ycm_extra_conf.py']
 nmap <leader>s :Rg<CR>
 
 
