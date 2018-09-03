@@ -147,6 +147,8 @@ let g:signify_realtime = 1
 
 autocmd filetype python nnoremap <c-]> :YcmCompleter GoToDeclaration<CR>
 
+nmap <leader>s :Rg<CR>
+
 
 set t_Co=256
 " set termguicolors
