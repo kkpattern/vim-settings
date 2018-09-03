@@ -99,6 +99,7 @@ let g:Lf_DefaultMode='FullPath'
 let g:Lf_UseVersionControlTool = 0
 let g:Lf_CommandMap = {'<C-]>': ['<C-V>'], '<C-X>': ['<C-H>']}
 
+let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_list_select_completion=["<c-j>"]
 let g:ycm_key_list_previous_completion=["<c-k>"]
